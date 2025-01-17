@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #00005c;
+  font-family: "Inter", sans-serif;
+  list-style-type: none;
+}
+
+.search {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+  align-items: center;
+  margin: 1rem;
+}
+
+form {
+  display: flex;
+}
+
+button {
+  padding: 0.25rem 1rem;
+  color: #00005c;
+  background-color: #d6d6e5;
+  border-radius: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  width: fit-content;
+  cursor: pointer;
+}
+
+input {
+  border-radius: 99em;
+  padding: 0.375em 0.75em 0.375em 0.375em;
+}
+
+label {
+  display: flex;
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.375em;
+  align-items: center;
+}
+label input {
+  position: absolute;
+  left: -9999px;
+}
+label input:checked + span {
+  background-color: #d6d6e5;
+}
+label input:checked + span:before {
+  box-shadow: inset 0 0 0 0.4375em #00005c;
+}
+label span {
+  display: flex;
+  align-items: center;
+  padding: 0.375em 0.75em 0.375em 0.375em;
+  border-radius: 99em;
+  transition: 0.25s ease;
+}
+label span:hover {
+  background-color: #d6d6e5;
+}
+label span:before {
+  display: flex;
+  flex-shrink: 0;
+  content: "";
+  background-color: #fff;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 50%;
+  margin-right: 0.375em;
+  transition: 0.25s ease;
+  box-shadow: inset 0 0 0 0.125em #00005c;
+}
+
+header {
+  display: grid;
+  margin: 1rem;
+  place-items: center;
+}
+
+header > a > img {
+  width: 200px;
+  grid-row: 1 / 1;
+}
+
+.profile-pic {
+  border-radius: 100%;
+}
+
+.flex-item {
+  display: flex;
+  align-items: center;
+}
+
+header ul {
+  display: flex;
+  place-self: end;
+  grid-row: 1;
+  align-items: center;
+  gap: 1rem;
+  font-weight: bold;
+}
+
+header > ul > li > a {
+  line-height: 2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 99em;
+  background-color: #d6d6e5;
+  font-weight: bold;
+}
+
+.grid-container {
+  display: grid;
+  justify-content: space-evenly;
+  grid-template-columns: repeat(3, auto);
+  gap: 3rem;
+  text-align: center;
+}
+
+article {
+  padding: 1rem;
+  background: #e5e5e5;
+  width: 452px;
+  border-radius: 1rem;
+  box-shadow: 0 0 0.25rem 0.125rem #00005c7e;
+}
+
+.article-container {
+  display: grid;
+  place-self: center;
+}
+
+.article-container > article {
+  grid-column: 2/3;
+}
